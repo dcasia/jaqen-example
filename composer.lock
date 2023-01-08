@@ -68,7 +68,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dcasia/jaqen",
-                "reference": "d4c6395b8671315884eb1255b959d26ade27dfa3"
+                "reference": "7f26b41e37780aaad0aa7d26c9ecf9e9005a43de"
             },
             "require": {
                 "ext-json": "*",
@@ -107,7 +107,7 @@
                 "MIT"
             ],
             "description": "Jaqen",
-            "time": "2023-01-08T06:32:19+00:00"
+            "time": "2023-01-08T08:35:54+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

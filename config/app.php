@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        App\Providers\JaqenServiceProvider::class,
 
         /*
          * Application Service Providers...
