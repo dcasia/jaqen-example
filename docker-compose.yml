@@ -2,25 +2,25 @@ version: "3.7"
 
 services:
 
-    php:
-        user: 1000:1000
-        build:
-            context: docker
-            dockerfile: php8.dockerfile
-        restart: unless-stopped
-        working_dir: /srv
-        volumes:
-            - .:/srv
-            - ~/.composer:/home/composer/.composer
-            - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+  php:
+    user: 1000:1000
+    build:
+      context: docker
+      dockerfile: php8.dockerfile
+    restart: unless-stopped
+    working_dir: /srv
+    volumes:
+      - .:/srv
+      - ~/.composer:/home/composer/.composer
+      - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
-    caddy:
-        image: caddy:2.2.1-alpine
-        restart: unless-stopped
-        working_dir: /srv
-        ports:
-            - 80:80
-        volumes:
-            - ./public:/srv/public
-            - ./storage/app/public:/srv/storage/app/public
-            - ./Caddyfile:/etc/caddy/Caddyfile
+  caddy:
+    image: caddy:2.2.1-alpine
+    restart: unless-stopped
+    working_dir: /srv
+    ports:
+      - 80:80
+    volumes:
+      - ./public:/srv/public
+      - ./storage/app/public:/srv/storage/app/public
+      - ./Caddyfile:/etc/caddy/Caddyfile

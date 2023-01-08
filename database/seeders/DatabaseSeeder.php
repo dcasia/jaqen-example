@@ -2,15 +2,23 @@
 
 namespace Database\Seeders;
 
-use Database\Factories\ArticleFactory;
-use Database\Factories\UserFactory;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    public function run(): void
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
     {
-        UserFactory::new()->count(10)->create();
-        ArticleFactory::new()->count(5)->create();
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }

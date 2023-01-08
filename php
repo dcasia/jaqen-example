@@ -1,1 +1,3 @@
-docker exec -it --user composer "${PWD##*/}"_php_1 php $@
+#!/usr/bin/env sh
+
+docker compose exec -u composer php php $@
